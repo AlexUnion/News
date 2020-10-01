@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webpack starter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-  <main>
-    <h4>TODO</h4>
-
-    <ul>
-      <li>Handle your SCSS</li>
-      <li>Extract your styles into one file</li>
-      <li>Add eslint to project</li>
-    </ul>
-  </main>
+<div class="app">
+  <h1>The Guardian News</h1>
+  <button type="button" class="btn" id="refresh">Refresh</button>
+  <div class="text-center hidden-block" id="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <ul class='list' id="list">
+  </ul>
+</div>
 </body>
 </html>
