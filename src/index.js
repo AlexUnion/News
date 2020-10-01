@@ -9,7 +9,9 @@ const refreshBtn = document.getElementById('refresh');
 
 async function getNews() {
     const result = await fetch(url)
-        .then((res) => res.json())
+        .then((res) => res.json(), (e) => {
+            throw new Error(`Сетевая ошибка: ${e.message}`);
+        })
         .then(({ response }) => response.results);
     return result;
 }
