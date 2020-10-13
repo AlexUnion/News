@@ -7,8 +7,8 @@ const list = document.getElementById('list');
 const loader = document.getElementById('loader');
 const refreshBtn = document.getElementById('refresh');
 
-async function getNews() {
-    const result = await fetch(url)
+function getNews() {
+    const result = fetch(url)
         .then((res) => res.json(), (e) => {
             throw new Error(`Сетевая ошибка: ${e.message}`);
         })
@@ -22,11 +22,11 @@ function insertNewsElement(text) {
     list.insertAdjacentElement('beforeend', element);
 }
 
-async function renderNews() {
+function renderNews() {
     list.innerHTML = '';
     loader.classList.toggle('hidden-block');
     try {
-        await getNews(url)
+        getNews(url)
             .then((news) => {
                 news.forEach(({ webTitle }) => {
                     insertNewsElement(webTitle);
