@@ -16,9 +16,21 @@ body {
   text-align: left;
 
   & li {
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: default;
+    margin: 20px 0;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  & li:first-child {
+    margin-top: 25px;
+  }
+
+  & li:hover {
+    box-shadow: 2px 2px 6px 1px black;
+  }
+
+  & li:hover .li-header {
+    background-color: #888;
   }
 }
 
@@ -42,4 +54,56 @@ body {
 .error {
   text-align: center;
   list-style: none;
+}
+
+.li-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #aaa;
+  transition: background-color .2s linear;
+}
+
+img {
+  padding: 5px 0;
+  display: inline-block;
+  background: #aaaaaa;
+}
+
+h2 {
+  font: 22px/1.2em sans-serif;
+  display: inline-block;
+  padding: 6px 10px 3px;
+}
+
+.description {
+  font: 20px/1.1em sans-serif;
+  text-align: justify;
+  color: #555;
+  background: white;
+  padding: 5px 10px;
+}
+
+.invisible-block {
+  visibility: hidden;
+}
+
+.choose_page {
+  display: flex;
+  margin: 30px 0;
+
+  & .choose_item {
+    width: 33%;
+  }
+}
+
+.page_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.current-page {
+  padding: 5px;
+  border: 1px solid #333;
 }
