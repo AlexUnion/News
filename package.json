@@ -2,11 +2,14 @@
   "name": "hillel-group",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://alexunion.github.io/news",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/NativeJedi/Hillel-group/issues"
   },
-  "homepage": "https://github.com/NativeJedi/Hillel-group#readme",
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
