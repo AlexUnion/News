@@ -2,7 +2,7 @@
   "name": "hillel-group",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://alexunion.github.io/news",
+  "homepage": "https://alexunion.github.io/News/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,14 +12,10 @@
     "deploy": "gh-pages -d dist"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NativeJedi/Hillel-group.git"
+    "type": "git"
   },
   "author": "RL",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NativeJedi/Hillel-group/issues"
-  },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
