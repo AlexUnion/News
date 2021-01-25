@@ -1,3 +1,6 @@
+$medium: 900px;
+$small: 500px;
+
 body {
   background-color: #eee;
   margin: 0;
@@ -8,6 +11,13 @@ body {
   margin: 10px 150px;
   text-align: center;
 
+  @media screen and (max-width: 1150px) {
+    margin: 10px 50px;
+  }
+
+  @media screen and (max-width: $medium) {
+    margin: 5px;
+  }
 }
 .list {
   font: 20px/1 sans-serif;
@@ -15,10 +25,35 @@ body {
   padding: 0;
   text-align: left;
 
+  .li-header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ddd;
+    transition: background-color .2s linear;
+  }
+
   & li {
     margin: 20px 0;
     list-style: none;
     cursor: pointer;
+
+    & .description {
+      font: 20px/1.1em sans-serif;
+      text-align: justify;
+      color: #555;
+      background: white;
+      padding: 5px 10px;
+    }
+
+    @media screen and (max-width: $medium) {
+      margin: 5px 0;
+
+      & .description {
+        font: 14px/1em sans-serif;
+      }
+    }
   }
 
   & li:first-child {
@@ -30,7 +65,7 @@ body {
   }
 
   & li:hover .li-header {
-    background-color: #888;
+    background-color: #bbb;
   }
 }
 
@@ -42,9 +77,14 @@ body {
   font: inherit;
   padding: 10px 25px;
   background-color: #ccc;
-  border-radius: 10px;
+  border-radius: 7px;
   border: 1px solid black;
   cursor: pointer;
+
+  @media screen and (max-width: $small) {
+    padding: 5px 15px;
+    font-size: 18px;
+  }
 }
 
 .text-center {
@@ -56,33 +96,21 @@ body {
   list-style: none;
 }
 
-.li-header {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  background-color: #aaa;
-  transition: background-color .2s linear;
-}
-
 img {
   padding: 5px 0;
-  display: inline-block;
-  background: #aaaaaa;
 }
 
 h2 {
   font: 22px/1.2em sans-serif;
   display: inline-block;
   padding: 6px 10px 3px;
+
+  @media screen and (max-width: $medium) {
+    font: 16px/1.1em sans-serif;
+  }
 }
 
-.description {
-  font: 20px/1.1em sans-serif;
-  text-align: justify;
-  color: #555;
-  background: white;
-  padding: 5px 10px;
-}
+
 
 .invisible-block {
   visibility: hidden;
@@ -95,6 +123,17 @@ h2 {
   & .choose_item {
     width: 33%;
   }
+
+  @media screen and (max-width: $small){
+    flex-direction: column;
+    margin: 0 3px;
+    padding: 5px 0;
+
+    & .choose_item {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
 }
 
 .page_text {
@@ -105,5 +144,4 @@ h2 {
 
 .current-page {
   padding: 5px;
-  border: 1px solid #333;
 }

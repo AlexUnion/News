@@ -1,7 +1,7 @@
 {
-  "name": "hillel-group",
-  "version": "1.0.0",
-  "description": "",
+  "name": "guardian_api_example",
+  "version": "1.0.1",
+  "description": "My example of using an Guardian API",
   "homepage": "https://alexunion.github.io/News/",
   "main": "index.js",
   "scripts": {
